@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Bootstrap 5.x -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
+    "
+    />
+    <!-- DataTable -->
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.bootstrap5.css"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.bootstrap5.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <!-- Datatable requiere de manera obligatoria, la cabecera Thead y el cuerpo Tbody -->
+            <table class="table" id="tabla-contactos" style="width: 100%;">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Apellidos</th>
+                  <th>Nombres</th>
+                  <th>Email</th>
+                  <th>Telefono</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>torres</td>
+                    <td>juan</td>
+                    <td>juan@gmail.com</td>
+                    <td>956111222</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jimenez</td>
+                    <td>Flor</td>
+                    <td>flor@gmail.com</td>
+                    <td>956111333</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Atuncar</td>
+                    <td>Fabricio</td>
+                    <td>fabricio@gmail.com</td>
+                    <td>956111444</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Tasayco</td>
+                    <td>Hugo</td>
+                    <td>hugo@gmail.com</td>
+                    <td>956111555</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Atuncar</td>
+                    <td>Fiorela</td>
+                    <td>fiorela@gmail.com</td>
+                    <td>956111666</td>
+                  </tr>
+              </tbody>
+              <tfoot>
+
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+<!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+  <!-- Extension BS%  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- DataTable Core -->
+  <script src="//cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
+  
+  <!-- DataTable estilos BS5 -->
+  <script src="https://cdn.datatables.net/2.0.5/js/dataTables.bootstrap5.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", ()=>{
+      const dtContactos = new DataTable("#tabla-contactos",{
+        language :{
+          url : '../js/Spanish.json'
+        }
+      });
+    })
+  </script>
+</html>
